@@ -1,4 +1,3 @@
-
 # Pull base image.
 FROM alpine:latest
 

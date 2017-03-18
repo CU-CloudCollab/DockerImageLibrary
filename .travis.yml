@@ -3,8 +3,6 @@ sudo: required
 services:
   - docker
 
-env: # keep this
-
 matrix:
   include:
     - env: SUBFOLDER=cwmonitor

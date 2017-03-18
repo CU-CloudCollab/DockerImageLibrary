@@ -7,8 +7,12 @@ matrix:
   include:
     - env:
       - SUBFOLDER=cwmonitor
+      - REPO=cucloudcollab/cwmonitor
+      - TAG=$TRAVIS_BUILD_NUMBER
       services:
         - docker
 
 script:
   - docker build $SUBFOLDER
+  - echo $REPO
+  - echo $TAG

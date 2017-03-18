@@ -16,3 +16,7 @@ script:
   - docker build $SUBFOLDER
   - echo $REPO
   - echo $TAG
+
+after_success:
+  - echo $REPO
+  - echo $TAG

@@ -3,11 +3,5 @@ sudo: required
 services:
   - docker
 
-env: # important - needed for matrix build
-
-matrix:
-  include:
-    - env: SUBFOLDER=cwmonitor
-
 script:
-  - docker build $SUBFOLDER
+  - docker build ./cwmonitor

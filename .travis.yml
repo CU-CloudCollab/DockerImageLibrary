@@ -5,7 +5,8 @@ services:
 
 matrix:
   include:
-    - env: SUBFOLDER=cwmonitor
+    - env:
+      - SUBFOLDER=cwmonitor
       services:
         - docker
 

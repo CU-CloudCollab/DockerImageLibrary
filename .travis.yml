@@ -11,6 +11,7 @@ matrix:
       - TAG=$TRAVIS_BUILD_NUMBER
       services:
         - docker
+
     - env:
       - SUBFOLDER=testrepo
       - REPO=cucloudcollab/testrepo

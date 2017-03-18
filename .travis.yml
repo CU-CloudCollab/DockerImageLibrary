@@ -13,10 +13,7 @@ matrix:
         - docker
 
 script:
-  - docker build $SUBFOLDER
-  - echo $REPO
-  - echo $TAG
+  - docker build $SUBFOLDER -t $REPO:$TAG
 
 after_success:
-  - echo $REPO
-  - echo $TAG
+  - docker images

@@ -8,20 +8,21 @@ matrix:
     - env:
       - SUBFOLDER=cwmonitor
       - REPO=cucloudcollab/cwmonitor
-      - TAG=$TRAVIS_BUILD_NUMBER
+      - TAG=$TRAVIS_COMMIT
       services:
         - docker
 
     - env:
       - SUBFOLDER=testrepo
       - REPO=cucloudcollab/testrepo
-      - TAG=$TRAVIS_BUILD_NUMBER
+      - TAG=$TRAVIS_COMMIT
       services:
         - docker
 
 script:
-  - docker build $SUBFOLDER -t $REPO:$TAG
+  - docker build $SUBFOLDER -t $REPO:$TAG -t $REPO:latest
 
 after_success:
   - docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
   - docker push $REPO:$TAG
+  - docker push $REPO:latest

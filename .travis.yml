@@ -1,0 +1,21 @@
+sudo: required
+
+services:
+  - docker
+
+matrix:
+  include:
+    - env:
+      - SUBFOLDER=cwmonitor
+      - REPO=cucloudcollab/cwmonitor
+      - TAG=$TRAVIS_COMMIT
+      services:
+        - docker
+
+script:
+  - docker build $SUBFOLDER -t $REPO:$TAG -t $REPO:latest
+
+after_success:
+  - docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
+  - docker push $REPO:$TAG
+  - docker push $REPO:latest

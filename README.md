@@ -21,7 +21,7 @@ testrepo/
   README.md
 ```
 
-## Setup automated built + publishing
+## Setup automated build + publishing
 
 This repository is configured for build and publish with Travis CI.  Builds are triggered by pushes on this repository, as well as a daily cron trigger to ensure new images are published at least daily.  The build status and history is available here: https://travis-ci.org/CU-CloudCollab/DockerImageLibrary
 

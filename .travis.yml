@@ -12,6 +12,13 @@ matrix:
       services:
         - docker
 
+    - env:
+      - SUBFOLDER=node_oracle
+      - REPO=cucloudcollab/node-oracle
+      - TAG=$TRAVIS_COMMIT
+      services:
+        - docker
+
 script:
   - docker build $SUBFOLDER -t $REPO:$TAG -t $REPO:latest
 

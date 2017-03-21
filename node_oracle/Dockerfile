@@ -1,5 +1,5 @@
 # Pull base image
-FROM cucloudcollab/oracle:latest
+FROM cucloudcollab/oracle-instantclient:latest
 MAINTAINER Scott Ross <sr523@cornell.edu>
 
 # Add Nodejs

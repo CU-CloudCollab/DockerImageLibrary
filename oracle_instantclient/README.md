@@ -7,7 +7,7 @@ python, and others.
 Within Dockerfile:
 
 ```
-FROM cucloudcollab/oracle
+FROM cucloudcollab/oracle-instantclient
 ```
 
 ## Versions

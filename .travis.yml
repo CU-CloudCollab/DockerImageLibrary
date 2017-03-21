@@ -19,6 +19,13 @@ matrix:
       services:
         - docker
 
+    - env:
+      - SUBFOLDER=oracle_instantclient
+      - REPO=cucloudcollab/oracle-instantclient
+      - TAG=$TRAVIS_COMMIT
+      services:
+        - docker
+
 script:
   - docker build $SUBFOLDER -t $REPO:$TAG -t $REPO:latest
 

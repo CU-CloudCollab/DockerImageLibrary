@@ -1,7 +1,7 @@
 # Node-Oracle
 
-Docker image to be used for a base to nodejs project ready with Oracle instant
-client binaries.  All necessary environment variables are set and ready for use.
+Docker image to be used as a base for nodejs developement.  This uses the oracle base
+docker image.  All necessary environment variables are set and ready for use.
 
 ## Usage
 Within Dockerfile:

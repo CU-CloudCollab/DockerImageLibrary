@@ -1,6 +1,6 @@
 # Pull base image
 FROM alpine:latest
-LABEL authors="Scott Ross <sr523@cornell.edu>"
+LABEL maintainer "Scott Ross <sr523@cornell.edu>"
 
 # Add AWS to install oracle
 RUN apk -Uuv add groff less python py-pip && \

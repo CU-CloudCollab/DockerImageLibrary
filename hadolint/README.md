@@ -1,1 +1,1 @@
-# Cornell Hadlint Docker
+# Cornell Hadolint Docker

@@ -59,9 +59,10 @@ This project is configured to use the Travis CI build matrix functionality (http
 
 We recommend using the git hash as a tag for your image builds ($TRAVIS_COMMIT, as shown above).  While a commit is current, each daily build will overwrite the prior with the latest upstream patches.  Additionally, the current build will automatically be tagged as "latest".
 
-## Best Practices enforcement
+## Dockerfile Best Practices
 
-We recommend using hadolint to have dockerfiles conform to community best practices.  This linter is parsing the Dockerfile into an AST and performs rules on top of the AST. It is standing on the shoulders of Shellcheck to lint the Bash code inside RUN instructions.  We are using hadolint over
+We recommend using hadolint to have dockerfiles conform to community best practices.  This linter is parsing the Dockerfile into an AST and performs rules on top of the AST.
+It is standing on the shoulders of Shellcheck to lint the Bash code inside RUN instructions.  We are using hadolint over
 other linters (specifically dockerlinter) because it offers a bit more features.  It is a bit more challenging to install, but if you are running
 a mac you can simply use brew .. and, of course, you can always use Docker.
 

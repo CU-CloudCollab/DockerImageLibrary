@@ -34,7 +34,7 @@ matrix:
         - docker
 
 script:
-  - docker run --rm -i lukasmartinelli/hadolint < $SUBFOLDER/Dockerfile
+  - docker run --rm -i cucloudcollab/hadolint < $SUBFOLDER/Dockerfile
   - docker build $SUBFOLDER -t $REPO:$TAG -t $REPO:latest
 
 after_success:

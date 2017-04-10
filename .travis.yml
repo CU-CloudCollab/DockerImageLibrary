@@ -33,7 +33,7 @@ matrix:
       - SUBFOLDER=pypicloud
       - REPO=cucloudcollab/pypi
       - TAG=$TRAVIS_COMMIT
-      - LINT_IGNORE=--ignore SC2102  --ignore DL3013
+      - LINT_IGNORE=--ignore SC2102 --ignore DL3013
       services:
         - docker
 

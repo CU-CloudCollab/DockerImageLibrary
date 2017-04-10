@@ -46,7 +46,7 @@ matrix:
         - docker
 
 script:
-  - docker run --rm -i -v $(pwd)/Dockerfile:opt/hadolint/Dockerfile cucloudcollab/hadolint hadolint $LINT_IGNORE Dockerfile
+  - docker run --rm -i -v $(pwd)/$SUBFOLDER/Dockerfile:opt/hadolint/Dockerfile cucloudcollab/hadolint hadolint $LINT_IGNORE Dockerfile
   - docker build $SUBFOLDER -t $REPO:$TAG -t $REPO:latest
 
 after_success:

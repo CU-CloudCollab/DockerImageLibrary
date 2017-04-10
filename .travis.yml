@@ -9,7 +9,7 @@ matrix:
       - SUBFOLDER=cwmonitor
       - REPO=cucloudcollab/cwmonitor
       - TAG=$TRAVIS_COMMIT
-      - LINT_IGNORE=--ignore DL3007
+      - LINT_IGNORE=''
       services:
         - docker
 
@@ -25,7 +25,7 @@ matrix:
       - SUBFOLDER=oracle_instantclient
       - REPO=cucloudcollab/oracle-instantclient
       - TAG=$TRAVIS_COMMIT
-      - LINT_IGNORE=--ignore DL3007
+      - LINT_IGNORE=''
       services:
         - docker
 
@@ -33,7 +33,7 @@ matrix:
       - SUBFOLDER=pypicloud
       - REPO=cucloudcollab/pypi
       - TAG=$TRAVIS_COMMIT
-      - LINT_IGNORE=--ignore DL3007
+      - LINT_IGNORE=''
       services:
         - docker
 

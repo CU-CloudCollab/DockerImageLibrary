@@ -1,5 +1,5 @@
 # Pull base image
-FROM alpine:latest
+FROM alpine:3.5
 LABEL maintainer "Scott Ross <sr523@cornell.edu>"
 
 # Add AWS to install oracle

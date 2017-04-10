@@ -40,6 +40,7 @@ matrix:
       - SUBFOLDER=cwmonitor
       - REPO=cucloudcollab/cwmonitor
       - TAG=$TRAVIS_COMMIT
+      - LINT_IGNORE=''
       services:
         - docker
 
@@ -47,6 +48,7 @@ matrix:
       - SUBFOLDER=testrepo
       - REPO=cucloudcollab/testrepo
       - TAG=$TRAVIS_COMMIT
+      - LINT_IGNORE=''
       services:
         - docker
 ```

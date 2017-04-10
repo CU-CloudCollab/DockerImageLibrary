@@ -9,7 +9,7 @@ matrix:
       - SUBFOLDER=cwmonitor
       - REPO=cucloudcollab/cwmonitor
       - TAG=$TRAVIS_COMMIT
-      - LINT_IGNORE=''
+      - LINT_IGNORE=--ignore DL3007
       services:
         - docker
 

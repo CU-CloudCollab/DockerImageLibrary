@@ -1,10 +1,10 @@
 # Pull base image
-FROM alpine:latest
+FROM alpine:3.5
 LABEL maintainer "Scott Ross <sr523@cornell.edu>"
 
 # Add AWS to install oracle
 RUN apk -Uuv add groff less python py-pip && \
-    pip install awscli && \
+    pip install awscli==1.11.74 && \
     apk --purge -v del py-pip && \
     rm /var/cache/apk/* && \
     apk add --update libaio && \

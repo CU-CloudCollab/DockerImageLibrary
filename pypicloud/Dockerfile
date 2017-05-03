@@ -1,5 +1,5 @@
 # Pull base image.
-FROM alpine
+FROM alpine:3.5
 
 # File Author / Maintainer
 LABEL maintainer "Shawn Bower <shawn.bower@gmail.com>"

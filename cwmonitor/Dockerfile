@@ -1,5 +1,5 @@
 # Pull base image.
-FROM alpine:latest
+FROM alpine:3.5
 
 # File Author / Maintainer
 LABEL maintainer "Shawn Bower <shawn.bower@gmail.com>"
@@ -16,9 +16,9 @@ RUN \
 # Define working directory.
 WORKDIR /
 
-RUN wget http://aws-cloudwatch.s3.amazonaws.com/downloads/CloudWatchMonitoringScripts-${SCRIPT_VERSION}.zip
-RUN unzip CloudWatchMonitoringScripts-${SCRIPT_VERSION}.zip
-RUN rm CloudWatchMonitoringScripts-${SCRIPT_VERSION}.zip
+RUN wget "http://aws-cloudwatch.s3.amazonaws.com/downloads/CloudWatchMonitoringScripts-${SCRIPT_VERSION}.zip"
+RUN unzip "CloudWatchMonitoringScripts-${SCRIPT_VERSION}.zip"
+RUN rm "CloudWatchMonitoringScripts-${SCRIPT_VERSION}.zip"
 
 COPY monitor.rb /opt/monitor.rb
 

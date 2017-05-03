@@ -9,6 +9,7 @@ matrix:
       - SUBFOLDER=cwmonitor
       - REPO=cucloudcollab/cwmonitor
       - TAG=$TRAVIS_COMMIT
+      - LINT_IGNORE=''
       services:
         - docker
 
@@ -16,6 +17,7 @@ matrix:
       - SUBFOLDER=node_oracle
       - REPO=cucloudcollab/node-oracle
       - TAG=$TRAVIS_COMMIT
+      - LINT_IGNORE=--ignore DL3007
       services:
         - docker
 
@@ -23,6 +25,7 @@ matrix:
       - SUBFOLDER=oracle_instantclient
       - REPO=cucloudcollab/oracle-instantclient
       - TAG=$TRAVIS_COMMIT
+      - LINT_IGNORE=''
       services:
         - docker
 
@@ -30,10 +33,20 @@ matrix:
       - SUBFOLDER=pypicloud
       - REPO=cucloudcollab/pypi
       - TAG=$TRAVIS_COMMIT
+      - LINT_IGNORE=--ignore SC2102 --ignore DL3013
+      services:
+        - docker
+
+    - env:
+      - SUBFOLDER=hadolint
+      - REPO=cucloudcollab/hadolint
+      - TAG=$TRAVIS_COMMIT
+      - LINT_IGNORE=--ignore DL3008
       services:
         - docker
 
 script:
+  - docker run --rm -i -v $(pwd)/$SUBFOLDER/Dockerfile:/opt/hadolint/Dockerfile cucloudcollab/hadolint hadolint $LINT_IGNORE Dockerfile
   - docker build $SUBFOLDER -t $REPO:$TAG -t $REPO:latest
 
 after_success:

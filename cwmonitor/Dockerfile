@@ -2,7 +2,7 @@
 FROM alpine:3.5
 
 # File Author / Maintainer
-LABEL maintainer "Shawn Bower <shawn.bower@gmail.com>"
+MAINTAINER "Shawn Bower <shawn.bower@gmail.com>"
 
 # variable for latest script version
 ENV SCRIPT_VERSION 1.2.1

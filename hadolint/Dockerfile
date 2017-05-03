@@ -1,5 +1,5 @@
 FROM haskell:7.10
-MAINTAINER "Scott Ross <sr523@cornell.edu>"
+LABEL maintainer "Scott Ross <sr523@cornell.edu>"
 
 ## Setup of haskell environmnet and tooling
 RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys "575159689BEFB442" \

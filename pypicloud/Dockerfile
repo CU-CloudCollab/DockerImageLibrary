@@ -2,7 +2,7 @@
 FROM alpine:3.5
 
 # File Author / Maintainer
-MAINTAINER "Shawn Bower <shawn.bower@gmail.com>"
+LABEL maintainer "Shawn Bower <shawn.bower@gmail.com>"
 
 # Install python libraries and pypicloud
 RUN apk add --update \

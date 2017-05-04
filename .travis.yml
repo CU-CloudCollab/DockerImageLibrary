@@ -39,6 +39,7 @@ matrix:
         - docker
 
 script:
+  - dockerlint $SUBFOLDER/Dockerfile
   - docker build $SUBFOLDER -t $REPO:$TAG -t $REPO:latest
 
 after_success:

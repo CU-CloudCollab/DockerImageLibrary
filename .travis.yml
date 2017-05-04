@@ -3,6 +3,10 @@ sudo: required
 services:
   - docker
 
+before_install:
+    - sudo apt-get -qq update
+    - sudo apt-get install nodejs npm
+
 matrix:
   include:
     - env:

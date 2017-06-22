@@ -5,7 +5,7 @@ services:
 
 before_install:
     - sudo apt-get -qq update
-    - sudo apt-get install -y nodejs
+    - sudo apt-get install -y nodejs npm
     - sudo npm install -g dockerlint
 
 matrix:

@@ -38,6 +38,13 @@ matrix:
       services:
         - docker
 
+    - env:
+      - SUBFOLDER=xvfb-firefox
+      - REPO=cucloudcollab/xvfb-firefox
+      - TAG=$TRAVIS_COMMIT
+      services:
+        - docker
+
 script:
   - dockerlint $SUBFOLDER/Dockerfile
   - docker build $SUBFOLDER -t $REPO:$TAG -t $REPO:latest

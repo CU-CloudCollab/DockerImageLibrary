@@ -45,6 +45,13 @@ matrix:
       services:
         - docker
 
+    - env:
+      - SUBFOLDER=samlapi
+      - REPO=cucloudcollab/samlapi
+      - TAG=$TRAVIS_COMMIT
+      services:
+        - docker
+
 script:
   - dockerlint $SUBFOLDER/Dockerfile
   - docker build $SUBFOLDER -t $REPO:$TAG -t $REPO:latest

@@ -25,6 +25,13 @@ matrix:
         - docker
 
     - env:
+      - SUBFOLDER=node_puppeteer
+      - REPO=cucloudcollab/node-puppeteer
+      - TAG=$TRAVIS_COMMIT
+      services:
+        - docker
+
+    - env:
       - SUBFOLDER=oracle_instantclient
       - REPO=cucloudcollab/oracle-instantclient
       - TAG=$TRAVIS_COMMIT

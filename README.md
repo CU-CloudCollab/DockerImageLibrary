@@ -57,7 +57,7 @@ This project is configured to use the Travis CI build matrix functionality (http
 
 ## Tagging + Downstream Images
 
-We reccomend using the git hash as a tag for your image builds ($TRAVIS_COMMIT, as shown above).  While a commit is current, each daily build will overwrite the prior with the latest upstream patches.  Additionally, the current build will automatically be tagged as "latest".
+We recommend using the git hash as a tag for your image builds ($TRAVIS_COMMIT, as shown above).  While a commit is current, each daily build will overwrite the prior with the latest upstream patches.  Additionally, the current build will automatically be tagged as "latest".
 
 
 ## Contributing

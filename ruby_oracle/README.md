@@ -1,4 +1,4 @@
-# Ruby OCI-8 Docker Image
+# Ruby Oracle Docker Image
 Running a Ruby application is very easy with Docker Hub's Ruby images.  Building a container
 triggers normal Ruby stuff like `bundle install` to install dependencies.
 
@@ -19,3 +19,20 @@ FROM cucloudcollab/ruby-oracle
 ## Versions
 This image pulls from the ruby 2.3 dockerhub file.  It basically adds oracle support
 to the image, copying from node_oracle.
+
+Need to include:
+
+```
+gem 'ruby-oci8'
+```
+
+## Testing
+
+
+```
+git clone https://github.com/CU-CloudCollab/DockerImageLibrary.git
+cd ruby_oracle
+docker build -t ruby_oracle .
+docker run --rm -it ruby_oracle /bin/sh
+irb -r oci8
+```

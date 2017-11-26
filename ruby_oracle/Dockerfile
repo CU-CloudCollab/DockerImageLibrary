@@ -1,5 +1,5 @@
 FROM ruby:2.3
-MAINTAINER VMIT
+LABEL maintainer "Scott Ross <sr523@cornell.edu>"
 
 # And also installed libaio1, build-essential and curl
 RUN apt-get update

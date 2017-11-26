@@ -25,6 +25,13 @@ matrix:
         - docker
 
     - env:
+      - SUBFOLDER=ruby_oracle
+      - REPO=cucloudcollab/ruby-oracle
+      - TAG=$TRAVIS_COMMIT
+      services:
+        - docker
+
+    - env:
       - SUBFOLDER=node_puppeteer
       - REPO=cucloudcollab/node-puppeteer
       - TAG=$TRAVIS_COMMIT
